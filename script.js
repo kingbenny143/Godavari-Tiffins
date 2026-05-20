@@ -40,11 +40,15 @@ if(dots.children[i]) dots.children[i].classList.add("active");
 }
 
 function setLang(lang){
-document.querySelectorAll('.en').forEach(e=>e.style.display=(lang==='en')?'block':'none');
-document.querySelectorAll('.te').forEach(e=>e.style.display=(lang==='te')?'block':'none');
+    document.querySelectorAll('.en').forEach(e=>{
+        e.classList.toggle('hidden', lang !== 'en');
+        e.style.display = (lang==='en') ? '' : 'none';
+    });
+    document.querySelectorAll('.te').forEach(e=>{
+        e.classList.toggle('hidden', lang !== 'te');
+        e.style.display = (lang==='te') ? '' : 'none';
+    });
 }
 
-function setLang(lang){
-document.querySelectorAll('.en').forEach(e=>e.style.display=(lang==='en')?'block':'none');
-document.querySelectorAll('.te').forEach(e=>e.style.display=(lang==='te')?'block':'none');
-}
+// Set default language on page load
+setLang('en');
