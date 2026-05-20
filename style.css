@@ -112,6 +112,7 @@ header p {
         gap: 8px;
         flex-wrap: wrap;
         justify-content: flex-end;
+        margin-bottom: 10px;
     }
 
     .lang-toggle button {
