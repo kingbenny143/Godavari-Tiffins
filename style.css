@@ -107,13 +107,29 @@ header p {
 
     .lang-toggle {
         position: absolute;
-        right: 15px;
-        top: 15px;
+        right: 12px;
+        top: 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
 
     .lang-toggle button {
-        padding: 8px 14px;
+        padding: 8px 12px;
         font-size: 13px;
+        min-width: 50px;
+    }
+}
+
+@media (max-width: 420px) {
+    .lang-toggle {
+        right: 10px;
+        top: 10px;
+    }
+
+    .lang-toggle button {
+        padding: 7px 10px;
+        font-size: 12px;
     }
 }
 
