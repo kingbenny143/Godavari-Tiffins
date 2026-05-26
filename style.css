@@ -150,7 +150,7 @@ header p {
         min-height: 300px;
         align-items: flex-start;
         padding-top: 20px;
-        background-size:content;
+        background-size: contain;
         background-repeat: none;
         background-color: #2b0000;
     }
