@@ -13,7 +13,7 @@ body {
 /* HEADER */
 header {
     /* Use local banner image stored in the project's assets folder. Place the banner image at: assets/banner.jpg */
-    background-image: url('assets/header.jpg');
+    background-image: url('assests/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
