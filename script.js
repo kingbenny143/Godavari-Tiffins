@@ -1,4 +1,3 @@
-   
 function toggleGallery(){
 document.getElementById("gallerySection").classList.toggle("hidden");
 }
@@ -21,23 +20,29 @@ function closePreview(){
 document.getElementById("previewModal").classList.add("hidden");
 }
 
-const gallery = document.getElementById("galleryScroll");
-const dots = document.getElementById("dots");
+document.addEventListener('DOMContentLoaded', function(){
+    const gallery = document.getElementById("galleryScroll");
+    const dots = document.getElementById("dots");
 
-if(gallery){
-const imgs = gallery.querySelectorAll("img");
-imgs.forEach((_,i)=>{
-let d=document.createElement("span");
-if(i==0)d.classList.add("active");
-dots.appendChild(d);
-});
+    if(gallery && dots){
+        const imgs = gallery.querySelectorAll("img");
+        imgs.forEach((_,i)=>{
+            let d=document.createElement("span");
+            if(i==0) d.classList.add("active");
+            dots.appendChild(d);
+        });
 
-gallery.addEventListener("scroll",()=>{
-let i=Math.round(gallery.scrollLeft/210);
-dots.querySelectorAll("span").forEach(d=>d.classList.remove("active"));
-if(dots.children[i]) dots.children[i].classList.add("active");
+        gallery.addEventListener("scroll",()=>{
+            let itemWidth = (gallery.firstElementChild ? gallery.firstElementChild.clientWidth + 16 : 210);
+            let i=Math.round(gallery.scrollLeft / itemWidth);
+            dots.querySelectorAll("span").forEach(d=>d.classList.remove("active"));
+            if(dots.children[i]) dots.children[i].classList.add("active");
+        });
+    }
+
+    // Set default language after DOM is ready
+    setLang('en');
 });
-}
 
 function setLang(lang){
     document.querySelectorAll('.en').forEach(e=>{
@@ -49,6 +54,3 @@ function setLang(lang){
         e.style.display = (lang==='te') ? '' : 'none';
     });
 }
-
-// Set default language on page load
-setLang('en');
