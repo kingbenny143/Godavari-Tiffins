@@ -151,7 +151,7 @@ header p {
         align-items: flex-start;
         padding-top: 20px;
         background-size: contain;
-        background-repeat: none;
+        background-repeat: no-repeat;
         background-color: #2b0000;
     }
 
