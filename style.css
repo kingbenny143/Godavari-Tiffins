@@ -47,7 +47,7 @@ header {
         opacity: 0;
     }
     to {
-        transform: scale(0.4);
+        transform: scale(1);
         opacity: 1;
     }
 }
@@ -150,6 +150,7 @@ header p {
         min-height: 300px;
         align-items: flex-start;
         padding-top: 20px;
+        background-size: cover;
     }
 
     .header-content {
