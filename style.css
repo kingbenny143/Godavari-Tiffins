@@ -47,7 +47,7 @@ header {
         opacity: 0;
     }
     to {
-        transform: scale(0.5);
+        transform: scale(0.4);
         opacity: 1;
     }
 }
